@@ -1,0 +1,177 @@
+/* Importando uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variáveis de cores para facilitar mudanças */
+:root {
+    --primary-color: #6366f1; /* Azul índigo moderno */
+    --primary-hover: #4f46e5;
+    --success-color: #10b981; /* Verde */
+    --success-hover: #059669;
+    --danger-color: #ef4444;  /* Vermelho */
+    --danger-hover: #dc2626;
+    --bg-color: #f3f4f6;      /* Fundo cinza claro */
+    --card-bg: #ffffff;       /* Fundo branco para as seções */
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #d1d5db;
+    --radius: 8px;
+}
+
+/* Reset básico de margens */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* Cabeçalho */
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Container principal (Cartão branco) */
+main {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 500px; /* Mantém o projeto centralizado num tamanho ideal */
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo de Labels e Inputs */
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Efeito de brilho ao clicar */
+}
+
+/* Botões Globais */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de "apertar" o botão */
+}
+
+/* Estilos da Lista de Tarefas */
+ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+li {
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.conteudo-tarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.conteudo-tarefa strong {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Grupo de botões dentro da lista */
+.botoes-acao {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.botoes-acao button {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.btn-concluir {
+    background-color: var(--success-color);
+}
+
+.btn-concluir:hover {
+    background-color: var(--success-hover);
+}
+
+.btn-excluir {
+    background-color: var(--danger-color);
+}
+
+.btn-excluir:hover {
+    background-color: var(--danger-hover);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 2rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
